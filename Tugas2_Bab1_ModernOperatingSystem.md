@@ -53,7 +53,7 @@ affect control of the machine or do **I/O)Input**/Output" are forbidden to user-
 programs. We will come back to the difference between kernel mode and user
 mode repeatedly throughout this book. It plays a crucial role in how operating systems work.
 
-![](gambar11.jpg)
+![](image/gambar11.jpg)
 
 The user interface program, shell or GUI, is the lowest level of user-mode software, and allows the user to start other programs, such as a Web browser, email reader, or music player. These programs, too, make heavy use of the operating system.
 
@@ -136,7 +136,7 @@ to the need for backward compatibility with older hardware. Other times it is an
 
 <center>WHAT IS AN OPERATING SYSTEM?</center>
 
-![](gambar12.jpg)
+![](image/gambar12.jpg)
 
 It should be noted that the operating system’s real customers are the application programs (via the application programmers, of course). They are the ones who deal directly with the operating system and its abstractions. In contrast, end
 users deal with the abstractions provided by the user interface, either a command-line shell or a graphical interface. While the abstractions at the user interface may be similar to the ones provided by the operating system, this is not always the
@@ -215,7 +215,7 @@ operating system automatically read the next job from the tape and began running
 
 <center>HISTORY OF OPERATING SYSTEMS</center>
 
-![](gambar13.jpeg)
+![](image/gambar13.jpeg)
 
 <center>Figure 1-3. An early batch system. (a) Programmers bring cards to 1401. (b)
 1401 reads batch of jobs onto tape. (c) Operator carries input tape to 7094. (d)
@@ -238,7 +238,7 @@ used for tape sorting and printing by banks and insurance companies.
 
 <center>INTRODUCTION</center>
 
-![](gambar14.jpeg)
+![](image/gambar14.jpeg)
 
 Developing and maintaining two completely different product lines was an expensive proposition for the manufacturers. In addition, many new computer customers initially needed a small machine but later outgrew it and wanted a bigger machine that would run all their old programs, but faster.
 
@@ -268,7 +268,7 @@ in main memory at once, the CPU could be kept busy nearly 100% of the time. Havi
 
 <center>INTRODUCTION</center>
 
-![](gambar15.jpeg)
+![](image/gambar15.jpeg)
 
 Another major feature present in third-generation operating systems was the ability to read jobs from cards onto the disk as soon as they were brought to the computer room. Then, whenever a running job finished, the operating system could
 load a new job from the disk into the now-empty partition and run it. This technique is called **spooling** (from **Simultaneous Peripheral Operation On Line**) and was also used for output. With spooling, the 1401s were no longer needed, and much carrying of tapes disappeared.
@@ -588,7 +588,7 @@ that are of concern to operating system designers. Needless to say, this will be
 very compact summary. Many books have been written on the subject of computer
 hardware and computer organization. Two well-known ones are by Tanenbaum and Austin (2012) and Patterson and Hennessy (2013).
 
-![](gambar16.jpeg)
+![](image/gambar16.jpeg)
 
 <center>COMPUTER HARDWARE REVIEW</center>
 
@@ -633,7 +633,7 @@ executed, even if the preceding instruction was a conditional branch that was ta
 Pipelines cause compiler writers and operating system writers great headaches because they expose the complexities of the underlying machine to them and they
 have to deal with them.
 
-![](gambar17.jpeg)
+![](image/gambar17.jpeg)
 
 Even more advanced than a pipeline design is a **superscalar** CPU, shown in Fig. 1-7(b). In this design, multiple execution units are present, for example, one
 for integer arithmetic, one for floating-point arithmetic, and one for Boolean operations. Two or more instructions are fetched at once, decoded, and dumped into a
@@ -704,7 +704,7 @@ polygons in graphics applications. They are not so good at serial tasks. They ar
 also hard to program. While GPUs can be useful for operating systems (e.g., encryption or processing of network traffic), it is not likely that much of the operating
 system itself will run on the GPUs.
 
-![](18.jpeg)
+![](image/18.jpeg)
 
 ### **1.3.2 Memory**
 
@@ -718,7 +718,7 @@ there is no delay in accessing them. The storage capacity available in them is
 
 <center>COMPUTER HARDWARE REVIEW</center>
 
-1[](19.jpeg)
+1[](image/19.jpeg)
 
 typically 32 × 32 bits on a 32-bit CPU and 64 × 64 bits on a 64-bit CPU. Less than
 1 KB in both cases. Programs must manage the registers (i.e., decide what to keep
@@ -815,7 +815,7 @@ as well. The only problem is that the time to randomly access data on it is clos
 three orders of magnitude slower. The reason is that a disk is a mechanical device,
 as shown in Fig. 1-10.
 
-![](10.jpeg)
+![](image/10.jpeg)
 
 A disk consists of one or more metal platters that rotate at 5400, 7200, 10,800
 RPM or more. A mechanical arm pivots over the platters from the corner, similar
@@ -937,7 +937,7 @@ the interrupt (which it may not be if it is busy handling a higher-priority one)
 puts the number of the device on the bus so the CPU can read it and know which
 device has just finished (many devices may be running at the same time).
 
-![](111.jpeg)
+![](image/111.jpeg)
 
 Once the CPU has decided to take the interrupt, the program counter and PSW
 are typically then pushed onto the current stack and the CPU switched into kernel
@@ -971,7 +971,7 @@ of a single bus (and certainly the IBM PC bus) to handle all the traffic was str
 to the breaking point. Something had to give. As a result, additional buses were
 added, both for faster I/O devices and for CPU-to-memory traffic. As a consequence of this evolution, a large x86 system currently looks something like Fig. 1-12.
 
-1[](112.jpeg)
+1[](image/112.jpeg)
 
 This system has many buses (e.g., cache, memory, PCIe, PCI, USB, SATA, and
 DMI), each with a different transfer rate and function. The operating system must
@@ -1277,7 +1277,7 @@ get some job done often need to communicate with one another and synchronize
 their activities. This communication is called **interprocess communication**, and
 will be addressed in detail in Chap. 2.
 
-![](113.jpeg)
+![](image/113.jpeg)
 
 <center>  Figure 1-13. A process tree. Process A created two child processes, B and C.
 Process B created three child processes, D, E, and F</center>
@@ -1335,7 +1335,7 @@ World Wide Web home page. System calls are then needed to create and remove
 directories. Calls are also provided to put an existing file in a directory and to remove a file from a directory. Directory entries may be either files or other directories. This model also gives rise to a hierarchy—the file system—as shown in
 Fig. 1-14.
 
-![](114.jpeg)
+![](image/114.jpeg)
 
 The process and file hierarchies both are organized as trees, but the similarity stops there. Process hierarchies usually are not very deep (more than three levels is unusual), whereas file hierarchies are commonly four, fiv e, or even more levels deep. Process hierarchies are typically short-lived, generally minutes at most, whereas the directory hierarchy may exist for years. Ownership and protection also differ for processes and files. Typically, only a parent process may control or even 
 
@@ -1376,7 +1376,7 @@ they can all be mounted into a single tree as well.
 
 <center>INTRODUCTION</center>
 
-![](115.jpeg)
+![](image/115.jpeg)
 
 Another important concept in UNIX is the **special file.** Special files are provided in order to make I/O devices look like files. That way, they can be read and
 written using the same system calls as are used for reading and writing files. Two
@@ -1391,7 +1391,7 @@ very much like that of a file. Process B can read the data by reading from the p
 pipe, is by making a special system call. File systems are very important. We will
 have much more to say about them in Chap. 4 and also in Chaps. 10 and 11.
 
-![](116.jpeg)
+![](image/116.jpeg)
 
 <center>OPERATING SYSTEM CONCEPTS</center>
 
@@ -1683,7 +1683,7 @@ TRAP instruction is actually fairly similar to the procedure-call instruction in
 
 <center>INTRODUCTION</center>
 
-![](117.jpeg)
+![](image/117.jpeg)
 
 sense that the instruction following it is taken from a distant location and the return
 address is saved on the stack for use later.
@@ -1750,7 +1750,7 @@ parent process and which one is the child process.
 
 <center>Process management</center>
 
-![](118.jpeg)
+![](image/118.jpeg)
 
 In most cases, after a fork, the child will need to execute different code from
 the parent. Consider the case of the shell. It reads a command from the terminal,
@@ -1775,7 +1775,7 @@ is exec, but several library procedures call it with different parameters and sl
 different names. We will treat these as system calls here.) A highly simplified shell
 illustrating the use of fork, waitpid, and execve is shown in Fig. 1-19.
 
-![](119.jpeg)
+![](image/119.jpeg)
 
 In the most general case, execve has three parameters: the name of the file to
 be executed, a pointer to the argument array, and a pointer to the environment
@@ -1837,7 +1837,7 @@ reading, writing, or both. To create a new file, the O CREAT parameter is used.
 
 <center> SYSTEM CALLS</center>
 
-![](120.jpeg)
+![](image/120.jpeg)
 
 The file descriptor returned can then be used for reading or writing. Afterward, the file can be closed by close, which makes the file descriptor available for reuse on a subsequent open.
 
@@ -1879,7 +1879,7 @@ link("/usr/jim/memo", "/usr/ast/note");
 
 *the file memo in jim’s directory is now entered into ast’s directory under the name note. Thereafter, /usr/jim/memo and /usr/ast/note refer to the same file. As an aside, whether user directories are kept in /usr, /user, /home, or somewhere else is simply a decision made by the local system administrator.*
 
-![](121.jpeg)
+![](image/121.jpeg)
 
 Understanding how link works will probably make it clearer what it does.
 Every file in UNIX has a unique number, its i-number, that identifies it. This i-number is an index into a table of **i-nodes**, one per file, telling who owns the file, where its disk blocks are, and so on. A directory is simply a file containing a set of
@@ -1904,7 +1904,7 @@ where the first parameter is the name of a block special file for USB drive 0, t
 second parameter is the place in the tree where it is to be mounted, and the third
 parameter tells whether the file system is to be mounted read-write or read-only.
 
-![](122.jpeg)
+![](image/122.jpeg)
 
 After the mount call, a file on drive 0 can be accessed by just using its path from the root directory or the working directory, without regard to which drive it is on. In fact, second, third, and fourth drives can also be mounted anywhere in the tree. The mount call makes it possible to integrate removable media into a single
 integrated file hierarchy, without having to worry about which device a file is on.
@@ -2011,7 +2011,7 @@ managing the GUI. Windows Vista has an elaborate security system and also suppor
 
 <center>INTRODUCTION</center>
 
-![](123.jpeg)
+![](image/123.jpeg)
 
 One last note about Win32 is perhaps worth making. Win32 is not a terribly
 uniform or consistent interface. The main culprit here was the need to be backward compatible with the previous 16-bit interface used in Windows 3.x.
@@ -2070,7 +2070,7 @@ on Windows systems has well over 1000 of them.
 
 <center>INTRODUCTION </center>
 
-![](124.jpeg)
+![](image/124.jpeg)
 
 
 ### **1.7.2 Layered System**
@@ -2083,7 +2083,7 @@ The system had six layers, as shown in Fig. 1-25. Layer 0 dealt with allocation 
 expired. Above layer 0, the system consisted of sequential processes, each of which could be programmed without having to worry about the fact that multiple processes were running on a single processor. In other words, layer 0 provided the
 basic multiprogramming of the CPU.
 
-![](125.jpeg)
+![](image/125.jpeg)
 
 Layer 1 did the memory management. It allocated space for processes in main
 memory and on a 512K word drum used for holding parts of processes (pages) for
@@ -2163,7 +2163,7 @@ I/O commands directly. Instead, to program an I/O device, the driver builds a st
 
 <center>OPERATING SYSTEM STRUCTURE</center>
 
-![](126.jpeg)
+![](image/126.jpeg)
 
 the kernel to do the write. This approach means that the kernel can check to see
 that the driver is writing (or reading) from I/O it is authorized to use. Consequently
@@ -2219,7 +2219,7 @@ As far as the client is concerned, the same thing happens in both cases: request
 sent and replies come back. Thus the client-server model is an abstraction that can
 be used for a single machine or for a network of machines.
 
-![](127.jpeg)
+![](image/127.jpeg)
 
 Increasingly many systems involve users at their home PCs as clients and large machines elsewhere running as servers. In fact, much of the Web operates this way. A PC sends a request for a Web page to the server and the Web page comes back. This is a typical use of the client-server model in a network.
 
@@ -2243,7 +2243,7 @@ bare hardware and does the multiprogramming, providing not one, but several virt
 other operating systems, these virtual machines are not extended machines, with
 files and other nice features. Instead, they are exact copies of the bare hardware, including kernel/user mode, I/O, interrupts, and everything else the real machine has.
 
-![](128.jpeg)
+![](image/128.jpeg)
 
 Because each virtual machine is identical to the true hardware, each one can run any operating system that will run directly on the bare hardware. Different virtual machines can, and frequently do, run different operating systems. On the original IBM VM/370 system, some ran OS/360 or one of the other large batch or 
 
@@ -2290,7 +2290,7 @@ put up with now. Note that many authors use the terms interchangeably though.
 
 <center>OPERATING SYSTEM STRUCTURE</center>
 
-![](129.jpeg)
+![](image/129.jpeg)
 
 While no one disputes the attractiveness of virtual machines today, the problem
 then was implementation. In order to run virtual machine software on a computer,
@@ -2500,7 +2500,7 @@ an executable program, traditionally called a.out on UNIX systems. The various
 components of this process are illustrated in Fig. 1-30 for a program with three C
 files and two header files. Although we have been discussing operating system development here, all of this applies to developing any large program.
 
-![](130.jpeg)
+![](image/130.jpeg)
 
 ### **1.8.4 The Model of Run Time**
 
@@ -2558,7 +2558,7 @@ survived a rigorous peer review process in order to get published. Note that in 
 conferences, not in journals. Most of the papers cited in the research sections were
 published by either ACM, the IEEE Computer Society, or USENIX and are available over the Internet to (student) members of these organizations. For more information about these organizations and their digital libraries, see 
 
-![](poto.jpeg)
+![](image/poto.jpeg)
 
 irtually all operating systems researchers realize that current operating systems are massive, inflexible, unreliable, insecure, and loaded with bugs, certain
 ones more than others (names withheld here to protect the guilty). Consequently,
@@ -2620,7 +2620,7 @@ for milli and ‘‘μ’’ (the Greek letter mu) is for micro.
 
 <center>INTRODUCTION</center>
 
-![](131.jpeg)
+![](image/131.jpeg)
 
 It is also worth pointing out that, in common industry practice, the units for measuring memory sizes have slightly different meanings. There kilo means 210
 (1024) rather than 103 (1000) because memories are always a power of two. Thus a

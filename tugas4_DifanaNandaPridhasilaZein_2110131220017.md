@@ -299,9 +299,30 @@ Kekurangan :
 
 - Kinerja akan berkurang selagi bertambahnya fungsi-fungsi yang digunakan
 
+## **Kesimpulan**
+
+- **Struktur Sederhana**
+
+<p align="center"><img src="image/soo1.jpeg"></p>
+<p align="justify">Struktur sederhana atau monolitik merupakan struktur sistem operasi yang tidak terstruktur. Sistem operasi ini sebagai kumpulan prosedur yang masing-masing dapat saling dipanggil jika dibutuhkan. Setiap prosedur yang ada di dalam sistem ini mempunyai interface yang sudah didefinisikan dengan baik, dikarenakan semua layanan terdapat <b>didalam satu ruang</b> (satu baris memanjang) keuntungan yang didapat dalam menggunakan struktur ini adalah semua layanan yang dipanggil dapat dilakukan dengan cepat.</p>
 
 
+- **Strukur Berlapis**
 
+<p align="center"><img src="image/berrr.jpg"></p>
+<p align="justify">Struktur berlapis merupakan sistem operasi dipecah menjadi beberapa lapisan (tingkat), struktur ini tersusun dari beberapa lapisan yang <b>saling bertumpuk</b>. Lapisan bawah (lapisan 0) merupakan perangkat keras dan yang tertinggi (lapisan N) merupakan antarmuka pengguna. Lapisan sistem operasi adalah implementasi dari objek abstrak yang dibuat data dan operasi yang dapat memanipulasi data tersebut. Keuntungan utama dari pendekatan berlapis adalah kesederhanaan konstruksi dan debugging.</p>
+
+- **Mikrokernel**
+
+<p align="center"><img src="image/kernel.png"></p>
+<p align="justify">Mikrokernel merupakan metode menyusun sistem operasi dengan menghapus semua komponen yang tidak penting dari kernel dan mengimplementasikannya sebagai sistem dan program tingkat pengguna. Berfungsi untuk menyediakan komunikasi antara program klien dan berbagai layanan yang juga berjalan di ruang pengguna. Komunikasi diberikan melalui penyampaian pesan. Manfaat dari pendekatan mikrokernel adalah membuat perluasan sistem operasi lebih mudah
+
+## **Perbedaan**
+- Struktur Sederhana : tidak terstruktur dan berada dalam satu ruang yang sama.
+
+- Struktur Berlapis : lebih terstrukur karena semua fungsi mempunyai bagiannya dan dapat berdiri sendiri.
+
+- Mikrokernel : lebih baik dari struktur sederhana dan berlapis, lebih stabil dan lebih efisien dalam penggunaannya.
 
 
 
